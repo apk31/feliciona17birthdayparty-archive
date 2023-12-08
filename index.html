@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <title>Feliciona's 17th Birthday Party</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+        <audio id="myAudio" autoplay loop>
+        <source src="audio/bgsound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="audioControl" onclick="toggleAudio()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M533.6 32.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C557.5 113.8 592 180.8 592 256s-34.5 142.2-88.7 186.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C598.5 426.8 640 346.2 640 256s-41.5-170.8-106.4-223.5zM473.1 107c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C475.3 170.7 496 210.9 496 256s-20.7 85.3-53.2 111.8c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5c43.2-35.2 70.9-88.9 70.9-149s-27.7-113.8-70.9-149zm-60.5 74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C393.1 227.6 400 241 400 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C434.1 312.9 448 286.1 448 256s-13.9-56.9-35.4-74.5zM159.9 201.9L272 102.3V409.7L159.9 310.1c-4.4-3.9-10.1-6.1-15.9-6.1H56c-4.4 0-8-3.6-8-8V216c0-4.4 3.6-8 8-8h88c5.9 0 11.6-2.2 15.9-6.1zM290.2 32c-7.3 0-14.3 2.7-19.8 7.5L134.9 160H56c-30.9 0-56 25.1-56 56v80c0 30.9 25.1 56 56 56h78.9L270.4 472.5c5.5 4.8 12.5 7.5 19.8 7.5c16.5 0 29.8-13.3 29.8-29.8V61.8C320 45.3 306.7 32 290.2 32z"/></svg>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top px-3">
+        <a class="navbar-brand" href="#">
+            <img src="img/inv_title.webp" alt="Nicole Logo" width="100" height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto navbar-nav-scroll" style="--bs-scroll-height: 120px;">
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#profilebg">Profile</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#thedate">The Day</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#venue">Venue</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#attire">Dresscode</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#rsvp">Wishes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bg bg-1">
+        <section id="jumbo">
+            <!-- <div class="py-5"></div>
+            <div class="py-4"></div> -->
+            <img src="img/welcome.webp" alt="lets party" class="img-fluid main-image welcome mobile-com">
+            <img src="img/welcome_pc.webp" alt="lets party" class="img-fluid main-image welcome ds-com">
+        </section>
+    </div>
+    <div class="bg bg-2" id="profilebg">
+        <section id="profile">
+            <img src="img/inv_title.webp" alt="invitation title" class="img-fluid"> 
+            <img src="img/inv.webp" alt="invitation" class="img-fluid inv-txt w-50"> 
+        </section>
+    </div>
+    <div class="bg bg-3">
+        <section id="thedate">
+            <img src="img/date_1.webp" alt="date title" class="img-fluid">
+            <div class="py-3"></div>
+            <img src="img/date_2.webp" alt="date" class="img-fluid px-3 mobile-com" style="margin-top: -20px;">
+            <img src="img/date_2_pc.webp" alt="date" class="img-fluid px-3 ds-com" style="margin-top: -20px;">
+            <div class="row timer d-flex justify-content-center">
+                <div class="col-4 me-2" id="day">00</div>
+                <div class="col-4 mx-3" id="hrs">00</div>
+                <div class="col-4 ms-2" id="min">00</div>
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-4">
+        <section id="venue">
+            <img src="img/venue_1.webp" alt="venue title" class="img-fluid">
+            <div class="divider-1"></div>
+            <div class="text-center"> <a href="https://maps.app.goo.gl/y62ewWUJwgnxKA497"><img src="img/venue_2.webp" alt="venue map" class="img-fluid map"></a></div>
+            <div class="py-3 mobile-com"></div>
+            <div class="py-1 mobile-com"></div>
+            <img src="img/venue_3.webp" alt="venue place" class="img-fluid">
+        </section>
+    </div>
+    <div class="bg bg-5">
+        <section id="attire">
+            <img src="img/att_1.webp" alt="attire title" class="img-fluid px-5">
+            <div class="divider-2"></div>
+            <div class="px-md-5">
+                <img src="img/att_2.webp" alt="attire color" class="img-fluid px-4 px-md-5 dc-color">
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-6">
+        <section id="gallery">
+            <img src="img/gallery_1.webp" alt="gallery title" class="img-fluid px-5">
+            <div class="py-4"></div>
+            <img src="img/pic_1.webp" alt="gallery img 1" class="img-fluid big-img big-1 shadow main-image" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act1()">
+            <img src="img/pic_2.webp" alt="gallery img 2" class="img-fluid big-img big-2 shadow main-image" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act2()">
+            <div class="divider-3"></div>
+            <img src="img/pic_3.webp" alt="gallery img 3" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act3()">
+            <img src="img/pic_4.webp" alt="gallery img 4" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act4()">
+            <img src="img/pic_5.webp" alt="gallery img 5" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act5()">
+            <div class="px-md-5">
+                <img src="img/gallery_2.webp" alt="rules" class="img-fluid px-5 pt-3 pt-md-0">
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-7">
+        <section id="rsvp">
+            <div class="px-4">
+            <div class="px-2">
+                <img src="img/wish_1.webp" alt="invitation" class="img-fluid px-5">
+            </div>
+        <form action="https://feliciona17birthdayparty.vinchenamigo.com" method="post" class="wish-form">
+            <input type="hidden" name="_token" value="i2ZgD6hiwnTjR4Fav5G8ovzvLTFSno4mcx57GoAM" autocomplete="off">          
+            <label for="sender" class="text-start">Nama:</label>
+            <input type="text" name="sender" id="sender" class="shdow" required>
+            
+            <label for="wish" class="text-start">Wish:</label>
+            <textarea name="wish" id="wish" rows="2" class="shadow" required></textarea>
+    
+            <button type="submit" class="shadow">Submit</button>
+        </form>
+        <div class="px-4">
+            <div class="wish-list px-4">
+                            <div class="wish-item">
+                    zefanya<br>
+                    hbd to youu
+                </div>
+                            <div class="wish-item">
+                    ani<br>
+                    aaa
+                </div>
+                            <div class="wish-item">
+                    nia<br>
+                    wow
+                </div>
+                            <div class="wish-item">
+                    vini<br>
+                    yeyyy
+                </div>
+                            <div class="wish-item">
+                    Tabita<br>
+                    Happy birthday
+                </div>
+                            <div class="wish-item">
+                    Huixia<br>
+                    Thankyou
+                </div>
+                            <div class="wish-item">
+                    Diana<br>
+                    All the best for you ❤️❤️❤️❤️
+                </div>
+                            <div class="wish-item">
+                    Clarice Eleora<br>
+                    Happy Bornday Ai Xia
+                </div>
+                            <div class="wish-item">
+                    Suk Budi<br>
+                    Happy besdeey ...WUATB ..GBU
+                </div>
+                            <div class="wish-item">
+                    Richi<br>
+                    Tambah autis biar tambah rame biar tambah seru
+                </div>
+                            <div class="wish-item">
+                    :3<br>
+                    Tambah cantikk, baik baik sama farel, tetep jadi ciona yang kueren n moodbooster buat orang
+                </div>
+                            <div class="wish-item">
+                    holi<br>
+                    i hope you will experience the best year of your life, banyak hepi hepi &lt;3
+                </div>
+                            <div class="wish-item">
+                    Garda<br>
+                    Habede Feli, WUATB
+                </div>
+                            <div class="wish-item">
+                    Cristhian<br>
+                    Happy Birth Day
+                </div>
+                            <div class="wish-item">
+                    Tirto<br>
+                    WISH u all the best
+                </div>
+                            <div class="wish-item">
+                    Alek<br>
+                    Langgeng terus sama farel ya
+                </div>
+                            <div class="wish-item">
+                    Clarr<br>
+                    Wish u all the besttt xiaaa🤍🤍🤍🤍
+                </div>
+                            <div class="wish-item">
+                    Albert Gio<br>
+                    Wish u all d best , rejeki , karir , percintaan , kesehatan ❤️❤️
+                </div>
+                            <div class="wish-item">
+                    Vic<br>
+                    Halo xiaaaaa, happy bday yaa😘😘
+                </div>
+                            <div class="wish-item">
+                    Kei<br>
+                    Happy birthday xia💗
+Wish u all the best
+Terus sukses dancenya
+                </div>
+                            <div class="wish-item">
+                    .<br>
+                    Hbd Xiaa WYATB
+                </div>
+                            <div class="wish-item">
+                    Hans<br>
+                    Hbd temann
+                </div>
+                            <div class="wish-item">
+                    Danu<br>
+                    hbd feli/ona/wexia
+                </div>
+                            <div class="wish-item">
+                    Aileen<br>
+                    Happy Sweet 17 felll!💐
+Wish u all the best
+God bless u abundantly💗
+                </div>
+                            <div class="wish-item">
+                    Aileen<br>
+                    Happy Sweet 17 felll!💐
+Wish u all the best
+God bless u abundantly💗
+                </div>
+                            <div class="wish-item">
+                    vinaaa<br>
+                    pisweett 177
+                </div>
+                            <div class="wish-item">
+                    kannie<br>
+                    HAPPY BIRTHDAYYY MEMBER DNA PALING BERISIK 🤍🤍
+                </div>
+                            <div class="wish-item">
+                    olin<br>
+                    happy terusss
+                </div>
+                            <div class="wish-item">
+                    thea<br>
+                    semoga yg d semogakan tersemogakan 😁
+                </div>
+                            <div class="wish-item">
+                    joooy<br>
+                    semoga tambah pencilakan
+                </div>
+                            <div class="wish-item">
+                    Chen<br>
+                    HAPPY BDAY WEXIA! 💋 semoga  sing diinginkan tersemogakan, ga overthinkingan lagi, all the best for u xia 🤩
+                </div>
+                            <div class="wish-item">
+                    BELEELELEL<br>
+                    happiest seventeen bday for you sayangg, always be happy🤍
+                </div>
+                            <div class="wish-item">
+                    Agness<br>
+                    semogaa ga tambah pencilak an😮‍💨💗
+                </div>
+                            <div class="wish-item">
+                    Olga<br>
+                    HAPPY BIRTHDAY WEXIAA! 🥳🥳 Wish you all the best and God Bless You Alwayss!! Semakin jago ngedancenyaa 🤩
+                </div>
+                            <div class="wish-item">
+                    che<br>
+                    onaa, wish ur 17 can treat u well! God bless u &lt;33
+                </div>
+                            <div class="wish-item">
+                    Litong<br>
+                    WISH YOU ALL THE BEST POKOK E MUACH
+                </div>
+                            <div class="wish-item">
+                    vioo<br>
+                    wowowowow happy bdayyy xiaaa wishh u all the bestt🎊🎊🎉
+                </div>
+                            <div class="wish-item">
+                    cece olincee<br>
+                    happy sweet wexiaaa sayanggg all the best wishes for u xiaaa so sorry gabisa datenggg 💗💗
+                </div>
+                            <div class="wish-item">
+                    Tiwii<br>
+                    Hapi besdeyy Ona syg! Langgeng yak sm ayang ny 😘🫶🏻 GBU
+                </div>
+                            <div class="wish-item">
+                    Bro<br>
+                    wow mengewikan
+                </div>
+                            <div class="wish-item">
+                    Richardo Tandrian<br>
+                    Habede wesyaa!!
+                </div>
+                            <div class="wish-item">
+                    Marvel<br>
+                    Hbd ona, wish u all the best &amp; god bless you
+                </div>
+                            <div class="wish-item">
+                    icak<br>
+                    woowow wexiaaa alredi 17 sg baek baek yaa
+                </div>
+                            <div class="wish-item">
+                    Wilson<br>
+                    Moga makin bar bar
+                </div>
+                            <div class="wish-item">
+                    Owen<br>
+                    HBD, doa yang terbaik buat kamu
+                </div>
+                            <div class="wish-item">
+                    Cece elaine<br>
+                    Hepi sweet seventeen xia&quot; 🤩
+                </div>
+                            <div class="wish-item">
+                    Gwen<br>
+                    Happy level up Xia, best wishes for u ya !🥰
+                </div>
+                            <div class="wish-item">
+                    vicky<br>
+                    semoga sehat, bahagia, &amp; sukses selalu Tuhan berkati xia!
+                </div>
+                            <div class="wish-item">
+                    Reinoldy<br>
+                    Keep dancing!! 😊
+                </div>
+                            <div class="wish-item">
+                    Kristin<br>
+                    Wish your dream come true Dear Yesus selalu memegang dan menuntun langkah hidup Feliciona 🎁🎂🎊🎈🥰
+                </div>
+                            <div class="wish-item">
+                    -<br>
+                    Happy birthdaay!!
+                </div>
+                            <div class="wish-item">
+                    Darlene<br>
+                    Happy birthday Sandi Long live hidup terus yo GBU 😘🎁🎉🥳💗
+                </div>
+                            <div class="wish-item">
+                    bii<br>
+                    happy 17!😋🫰🏼 semoga ga sering ovt lop😋😋
+                </div>
+                            <div class="wish-item">
+                    ani<br>
+                    tes
+                </div>
+                            <div class="wish-item">
+                    Gina<br>
+                    Langgeng, tambah cakepp, stay humble😋
+                </div>
+                            <div class="wish-item">
+                    marsha<br>
+                    aaahappy bdayy🫶
+                </div>
+                            <div class="wish-item">
+                    Aiyaya<br>
+                    Happy birthday na, wish u all the best brooo ❤❤
+                </div>
+                            <div class="wish-item">
+                    sil<br>
+                    happy bwirthdayy 🥳 god bless u n wuatb ❤
+                </div>
+                            <div class="wish-item">
+                    Alicia<br>
+                    happy birthdayyy 🥳🥳
+                </div>
+                            <div class="wish-item">
+                    Song song couple<br>
+                    AIGO WEXIAA DAH GEDHE 
+HEPI BESDEII🔥
+                </div>
+                            <div class="wish-item">
+                    N<br>
+                    Wish u all the best felii! 🫂 
+semoga selalu ketiwi
+and langgeng trus yaa~🥳
+                </div>
+                            <div class="wish-item">
+                    .<br>
+                    panjang umur sehat  selalu
+                </div>
+                            <div class="wish-item">
+                    Gio<br>
+                    Happy birthday Feliciona wish you all the best.
+                </div>
+                            <div class="wish-item">
+                    besti mu yg plg alim<br>
+                    lopyu nong 😘
+                </div>
+                            <div class="wish-item">
+                    Jack<br>
+                    Habede Me WUATB GBU
+                </div>
+                            <div class="wish-item">
+                    Glendy<br>
+                    Wish you all the best
+                </div>
+                            <div class="wish-item">
+                    Joy<br>
+                    WEXIAAAAA SEMOGA KAMU SEHAT SELALU YAAAA, BAHAGIA TERUSSS SOALE KAMU ITU KEK MATAHARI NE ORANG-ORANGGG. BIG LOVEEEE❤️❤️❤️❤️❤️
+                </div>
+                            <div class="wish-item">
+                    floren<br>
+                    happy birthday xiaaa 🥳🥳🥳🫶🏻🫶🏻🫶🏻
+                </div>
+                            <div class="wish-item">
+                    Acien n Fam<br>
+                    Happy Sweet Birthday for you ! Hope you&#039;ll have wonderful years ahead !
+                </div>
+                        </div>
+        </div>
+
+        
+            </div>
+        </section>
+        <section id="thanks">
+            <div class="px-2 mt-4">
+                <img src="img/wish_2.webp" alt="invitation" class="img-fluid px-4  thanks">
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+          <div class="modal-content">
+            <div class="carousel slide" id="carouselExample">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="act1">
+                    <img src="img/pic_1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" id="act2">
+                    <img src="img/pic_2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" id="act3">
+                    <img src="img/pic_3.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" id="act4">
+                    <img src="img/pic_4.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" id="act5">
+                    <img src="img/pic_5.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="gif">
+    </div>
+    <div id="overlay" onclick="hideOverlay()">
+        <section id="overlay-contents" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="py-5"></div>
+            <div class="py-3 ds-com"></div>
+            <div class="dear-box">
+                <h3>Arsip</h3>
+            </div>
+            <button class="btn rounded-pill text-white glow" style="background-color: rgba(228, 44, 212, 0.9);">Valid for 0 person</button>
+
+            <p class="text-light mb-0 mt-3">Click anywhere to continue...</p>
+        </section>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $(window).scroll(function() {
+        // Navbar background color change
+        if ($(window).scrollTop() > 50) {
+            $('.navbar').css('background-color', 'rgba(55, 55, 55, 0.4)');
+        } else {
+            $('.navbar').css('background-color', 'transparent');
+        }
+
+        // Image Fade-In Animation based on scroll
+        $('img.img-fluid').each(function() {
+            let top_of_element = $(this).offset().top;
+            let bottom_of_element = top_of_element + $(this).outerHeight();
+            let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+            let top_of_screen = $(window).scrollTop();
+
+            if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+                if (!$(this).hasClass('animated')) {
+                    $(this).css({
+                        'transform': 'translateY(0)',
+                        'opacity': '1' 
+                    }).addClass('animated');
+                }
+            } else {
+                $(this).removeClass('animated').css({
+                    'transform': 'translateY(25px)',
+                    'opacity': '0'
+                });
+            }
+        });
+    });
+
+    // Countdown Timer Functionality
+    $(document).ready(function() {
+        let countDownDate = new Date(2023, 11, 2, 18, 0, 0, 0).getTime();
+        let interval = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            $('#day').text(String(days).padStart(2, '0'));
+            $('#hrs').text(String(hours).padStart(2, '0'));
+            $('#min').text(String(minutes).padStart(2, '0'));
+            $('#sec').text(String(seconds).padStart(2, '0'));
+
+            if (distance < 0) {
+                clearInterval(interval);
+                $('.countdown-timer').text('EXPIRED');
+            }
+        }, 1000);
+    });
+    function act1() {
+        $(".carousel-item").removeClass("active");
+        $("#act1").addClass("active");
+    }
+    function act2() {
+        $(".carousel-item").removeClass("active");
+        $("#act2").addClass("active");
+    }
+    function act3() {
+        $(".carousel-item").removeClass("active");
+        $("#act3").addClass("active");
+    }
+    function act4() {
+        $(".carousel-item").removeClass("active");
+        $("#act4").addClass("active");
+    }
+    function act5() {
+        $(".carousel-item").removeClass("active");
+        $("#act5").addClass("active");
+    }
+    // Audio control functionality
+    let audioElement = document.getElementById("myAudio");
+    let audioControl = document.getElementById("audioControl");
+
+    function hideOverlay() {
+        document.getElementById("overlay").classList.add("d-none");
+        audioElement.play();
+    }
+
+    function toggleAudio() {
+        if (audioElement.paused) {
+            audioElement.play();
+            // You can replace the SVG content here with the play icon
+            audioControl.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M533.6 32.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C557.5 113.8 592 180.8 592 256s-34.5 142.2-88.7 186.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C598.5 426.8 640 346.2 640 256s-41.5-170.8-106.4-223.5zM473.1 107c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C475.3 170.7 496 210.9 496 256s-20.7 85.3-53.2 111.8c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5c43.2-35.2 70.9-88.9 70.9-149s-27.7-113.8-70.9-149zm-60.5 74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C393.1 227.6 400 241 400 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C434.1 312.9 448 286.1 448 256s-13.9-56.9-35.4-74.5zM159.9 201.9L272 102.3V409.7L159.9 310.1c-4.4-3.9-10.1-6.1-15.9-6.1H56c-4.4 0-8-3.6-8-8V216c0-4.4 3.6-8 8-8h88c5.9 0 11.6-2.2 15.9-6.1zM290.2 32c-7.3 0-14.3 2.7-19.8 7.5L134.9 160H56c-30.9 0-56 25.1-56 56v80c0 30.9 25.1 56 56 56h78.9L270.4 472.5c5.5 4.8 12.5 7.5 19.8 7.5c16.5 0 29.8-13.3 29.8-29.8V61.8C320 45.3 306.7 32 290.2 32z"/></svg>`;
+        } else {
+            audioElement.pause();
+            // You can replace the SVG content here with the pause icon
+            audioControl.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>`;
+        }
+    }
+
+    </script>
+</body>
+</html>
